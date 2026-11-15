@@ -98,6 +98,7 @@ h2{font-size:13px;margin:2px 4px 10px;color:var(--acc);font-weight:800}
 #front{display:grid;grid-template-rows:auto 1fr}
 #back{transform:rotateY(180deg);overflow:auto;padding:20px 26px 28px}
 #card.flipped #front,#card:not(.flipped) #back{pointer-events:none}
+#card.nocal .cal,#card.nocal #ar,#card.nocal .hs{visibility:hidden!important}
 #flipbtn,#flipback{background:#1d2a44;color:var(--tx);border:1px solid var(--c,var(--acc));border-radius:8px;padding:6px 10px;font:inherit;font-size:12px;cursor:pointer}
 #flipbtn:hover,#flipback:hover{background:#244067}
 #flipbtn b{display:inline-block;min-width:18px;text-align:center;background:var(--c,#1d2a44);color:#06101c;border-radius:9px;padding:0 6px;margin-left:4px;font-size:11px}
@@ -577,7 +578,7 @@ function issues(){const out=[],seen=[];
  EG.forEach(g=>g.k.forEach(id=>{const m=gm(id);if(seen.indexOf(m)>=0)return;seen.push(m);const s=LV[rank[st(m)]];if(s!="ok")out.push({m,s,area:"Çevre · "+g.t})}));
  return out.sort((a,b)=>rank[b.s]-rank[a.s])}
 let flipped=false;
-function flip(v){flipped=v==null?!flipped:v;gid("card").classList.toggle("flipped",flipped);if(flipped)renderIssues()}
+let calT;function flip(v){flipped=v==null?!flipped:v;const cd=gid("card");cd.classList.toggle("flipped",flipped);clearTimeout(calT);calT=setTimeout(()=>cd.classList.toggle("nocal",flipped),400);if(flipped)renderIssues()}
 function renderIssues(){const it=issues(),cr=it.filter(x=>x.s=="crit").length,b=gid("flipbtn");
  gid("pc").textContent=it.length;b.className=it.length?(cr?"crit":"warn"):"ok";
  if(!flipped)return;
