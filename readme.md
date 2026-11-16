@@ -57,3 +57,9 @@ AstroHeal is a software project and is not a substitute for professional medical
 ## License
 
 No open-source license has been specified for this repository. Until a license is added, the project remains reserved to its copyright holder.
+
+## Conturbutors
+
+-MuhammedMustafaKizildag
+-ALPeren-iem
+-yunussahin06
