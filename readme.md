@@ -6,6 +6,8 @@ AstroHeal is a focused health and wellness web experience designed to make helpf
 
 This repository contains the AstroHeal web application and its static entry point. The project is part of the O.N.A.T initiative and is intended to provide a clear, approachable foundation for health-focused digital experiences.
 
+🔗 Canlı demo: https://o-n-a-t-309.github.io/AstroHeal/
+
 ## Features
 
 - Clean, accessible presentation of health and wellness content
