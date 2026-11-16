@@ -1,5 +1,5 @@
 # AstroHeal
-
+# This project was used in the NASA SPACE APPS CHALLANGE competition.
 AstroHeal is a focused health and wellness web experience designed to make helpful information easier to discover, understand, and use.
 
 ## About the project
